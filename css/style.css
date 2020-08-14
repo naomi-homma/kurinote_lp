@@ -1,0 +1,674 @@
+@charset "UTF-8";
+
+html {
+  margin: 0;
+  padding:0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", sans-serif;
+  font-weight: 500;
+  color: #333;
+  line-height: 2.0;
+  letter-spacing: 0.1em;
+  overflow-x: hidden;
+
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+ }
+
+h2,h3,h4,h5 {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+figure {
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul,li,dl,dt,dd {
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+
+a { 
+  text-decoration: none; 
+  transition: all .6s ease;
+}
+
+a:hover { 
+  transition: all .6s ease;
+}
+
+.content-wrapper {
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+section h2 {
+  font-size: 2rem;
+}
+
+/* ここから追記 */
+.header {
+  display: flex;
+  -ms-flex-pack:justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  z-index: 2;
+}
+
+.header h1 {
+  margin: 0 0 0 25px;	
+  font-size: 2.5rem;
+  color: #fff;
+  }
+
+#hide {
+  display: none;
+}
+
+  .header nav ul {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+}
+
+.header nav ul li {
+  margin: 0 20px;
+}
+
+header nav li a {
+  color: #fff;
+  display: block;
+}
+
+header nav li a:hover {
+  opacity: 0.6;
+}
+
+.header nav li a.phone {
+  margin: 0 30px 0 10px;
+  padding: 0 25px;
+  border: 1px solid #fff;
+  line-height: 50px;
+  display: block;
+  color: #fff;
+}
+
+.header nav li a.phone .my_icon {
+  padding-right: 0.4em;
+}
+
+.mainvisual {
+  position: relative;
+}
+
+.mainvisual_image {
+  height: 100vh;
+  object-fit: cover;
+  object-position: 0 15%;
+  -webkit-clip-path: polygon(100% 0, 100% 74%, 0 100%, 0 0);
+	clip-path: polygon(100% 0, 100% 74%, 0 100%, 0 0)
+}
+
+.mainvisual::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 1;
+  -webkit-clip-path: polygon(100% 0, 100% 74%, 0 100%, 0 0);
+	clip-path: polygon(100% 0, 100% 74%, 0 100%, 0 0)
+}
+
+.main_text {
+  color: #fff;
+  font-size: 5vw;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  z-index: 2;
+}
+
+.topics {
+  padding: 120px;
+}
+
+.topics .content-wrapper{
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.heading {
+  width: 35%;
+}
+
+.content {
+  width: 65%;
+}
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+table tr{
+  border-bottom: solid 1px #eee;
+  cursor: pointer;
+}
+
+table tr:hover{
+  background-color: #d4f0fd;
+}
+
+table th {
+  text-align: left;
+  width: 25%;
+  padding: 15px 0 15px 30px;
+}
+
+table td {
+  text-align: left;
+}
+
+table td a {
+  display: block;
+}
+
+.topics .content .btn  a {
+  display: block;
+  font-size: 0.8rem;
+  color: #000;
+  width: 200px;
+  border: solid 1px #000;
+  text-align: center;
+  line-height: 60px;
+  margin: 0 0 0 auto;
+}
+
+.topics .content .btn a:hover {
+  background: #333;
+  color: #fff;
+  }
+
+.institution {
+  position: relative;
+  background-image: url(../images/facility.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment:fixed;
+  height: 500px;
+  z-index: 1;
+  width: 100%;
+}
+
+.institution::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.institution .content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.institution h2 {
+  color: #fff;
+  text-align: left;
+}
+
+.institution p {
+  color: #fff;
+  text-align: left;
+  margin-bottom: 70px;
+}
+
+.institution p.btn {
+  margin: 0;
+}
+
+.institution p.btn a {
+  color: #fff;
+  display: block;
+  font-size: 0.875rem;
+  border: 1px solid #fff;
+  width: 200px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.institution p.btn a:hover {
+  background: #333;
+  color: #fff;
+  }
+
+.recruit {
+  padding: 10% 0;
+  position: relative;
+}
+
+.recruit::after {
+  content: "";
+  background-color: #f3f3f3;
+  height: 150%;
+  width: 40%;
+  position: absolute;
+  top: -10%;
+  left: 30%;
+  transform-origin: left top;
+  transform: skewX(-30deg);
+  z-index: -1;
+}
+
+.recruit h2 {
+  text-align: center;
+  margin-bottom: 8%;
+}
+
+.recruit ul {
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display: flex;
+  -ms-flex-pack:justify;
+  -webkit-justify-content: space-between;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  transform: skewY(2deg);
+}
+
+.recruit ul li {
+  width: 48%;
+  position: relative;
+}
+
+.recruit ul li figure::after {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 43%;
+  background: rgba(50, 50, 50, 0.7);
+  z-index: 1;
+  transition: all .6S ease;
+}
+
+.recruit ul li a:hover figure::after {
+  background: rgba(50, 50, 50, 0.4);
+  transition: all .6s ease;
+}
+
+.recruit li span {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) skewY(-2deg);
+  z-index: 2;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.contact {
+  position: relative;
+  background-image: url(../images/contact.jpg);
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 400px;
+}
+
+.contact::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.contact .btn a {
+  position: absolute;
+  display: block;
+  font-size: 0.8rem;
+  color: #fff;
+  width: 200px;
+  border: solid 1px #fff;
+  text-align: center;
+  line-height: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.contact .btn a:hover {
+  background: #fff;
+  color: #000;
+}
+
+.footer {
+  width: 100%;
+  padding-top: 120px;
+}
+
+.footer .footer_nav {
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display: flex;
+  -ms-flex-pack:justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: solid 1px #333;
+}
+
+.footer .footer_nav h1 a {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.footer .footer_nav ul {
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.footer .footer_nav li {
+  margin: 0 20px;
+}
+
+.footer .footer_nav li a{
+  color: #333;
+  padding: 0 25px;
+}
+
+.footer .footer_nav li a:hover {
+  opacity: 0.6;
+}
+
+.footer .address {
+  padding: 25px 0 80px 0;
+  color: #333;
+}
+
+.footer .address {
+  padding: 25px 0 80px 0;
+  color: #333;
+}
+
+.footer .address span {
+  padding-left: 1em;;
+}
+
+.footer .copyright {
+  color: #333;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+
+/* 最大の画面幅が1199pxの時=～1199px */
+@media (max-width: 1199px) {
+
+  .header {
+    position: absolute;
+    z-index: 2;
+  }
+  .header nav ul {
+    display: block;
+  }
+
+  #hide {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+  }
+
+  /* #cover {
+    background: rgba(0,0,0,0.6);
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: none; 
+  } */
+
+  #menu {
+    position: absolute;
+    top: 0;
+    right: -30%;  /*wigth分マイナス方向へ移動しブラウザから隠す*/
+    color: #fff;
+    background: rgb(0,0,0);
+    padding: 8px;
+    box-sizing: border-box;
+    width: 30%;
+    height: 100vh;
+    min-height: 100%;
+    z-index: 4;
+    transition: .4s;
+
+  }
+
+  #menu ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .header nav li a.phone {
+    margin: 20px 0px;
+    padding: 0 10px;
+    border: 1px solid #fff;
+    line-height: 50px;
+    display: block;
+    color: #fff;
+  }
+
+  body.menu-open {
+    overflow-y: hidden;
+  }
+  body.menu-open #cover {
+    display: block;
+  }
+  body.menu-open #menu {
+    right: 0;
+  }
+
+  .hamburger {
+    display: block;
+    position:absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 26px;
+    cursor: pointer;
+    }
+
+  .nav-button,
+  .nav-button span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+  }
+
+.nav-button {
+  position: relative;
+  width: 30px;
+  height: 26px;
+}
+
+.nav-button span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+}
+
+.nav-button span:nth-of-type(1) {
+  top: 0;
+}
+
+.nav-button span:nth-of-type(2) {
+  top: 11px;
+}
+
+.nav-button span:nth-of-type(3) {
+  bottom: 0;
+}
+
+.topics {
+  padding: 50px 5vw;
+}
+
+.topics .content-wrapper{
+  display: block;
+}
+
+.heading, .content {
+  width: 100%;
+}
+
+.topics .heading h2 {
+  text-align: center;
+  margin-bottom: 5vw;
+}
+
+.footer .footer_nav {
+  display: block;
+}
+
+}
+
+@media screen and (max-width: 767px){
+  .topics {
+    padding: 50px 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .topics .content .btn a {
+    width: 35%;
+    min-width: 200px;
+    margin: 0 auto;
+  }
+
+  .recruit ul {
+    transform: none;
+  }
+
+  .recruit li span {
+    transform: translate(-50%, -50%);
+    font-size: 1.75rem;
+  }
+
+  .footer .content-wrapper {
+    padding-top: 50px;
+    width: 90%;
+  }
+
+  .footer .footer_nav li {
+    width: calc(100%/3);
+    margin: 0 0 10px;
+  }
+
+  .footer .footer_nav li a {
+    display: block;
+    text-align: center;
+    padding: 0px;
+  }
+
+  .footer .footer_nav h1, .address {
+    text-align: center;
+  }
+  
+  
+}
+
+
+@media screen and (max-width: 479px) {
+  .topics .content th {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 1.25em 0 0 0;
+    border-bottom: 0;
+  }
+
+  .topics .content td {
+    display: block;
+    width: 100%;
+  }
+  
+  .institution.content {
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .institution h2,p {
+    text-align: center;
+  }
+
+  .institution p.btn a {
+    width: 30%;
+    min-width: 200px;
+    margin: 0 auto;
+  }
+
+  .recruit ul li {
+    width: 90%;
+    margin: 0 auto 20px auto;
+  }
+
+  .footer .footer_nav ul {
+    margin: 0px;
+  }
+
+  .footer .footer_nav h1, .address {
+    text-align: center;
+  }
+
+
+}
